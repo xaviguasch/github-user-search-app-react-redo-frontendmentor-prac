@@ -73,13 +73,15 @@ const InfoCard = ({ userData }) => {
           </div>
           <div className='info'>
             <ul className='info--list'>
-              <li className='list-el list-el--location'>
+              <li
+                className={`list-el list-el--location ${location ? '' : 'less-opacity'}`}
+              >
                 <div className='icon'>
                   <img src={IconLocation} alt='icon location' />
                 </div>
                 <p id='location'>{location || 'Not available'}</p>
               </li>
-              <li className='list-el list-el--blog'>
+              <li className={`list-el list-el--blog ${blog ? '' : 'less-opacity'}`}>
                 <div className='icon'>
                   <img src={IconWebsite} alt='icon website' />
                 </div>
@@ -87,7 +89,11 @@ const InfoCard = ({ userData }) => {
                   {blog || 'Not available'}
                 </a>
               </li>
-              <li className='list-el list-el--twitter'>
+              <li
+                className={`list-el list-el--twitter ${
+                  twitter_username ? '' : 'less-opacity'
+                }`}
+              >
                 <div className='icon'>
                   <img src={IconTwitter} alt='icon twitter' />
                 </div>
@@ -95,7 +101,7 @@ const InfoCard = ({ userData }) => {
                   {twitter_username || 'Not available'}
                 </a>
               </li>
-              <li className='list-el list-el--company'>
+              <li className={`list-el list-el--company ${company ? '' : 'less-opacity'}`}>
                 <div className='icon'>
                   <img src={IconCompany} alt='icon company' />
                 </div>

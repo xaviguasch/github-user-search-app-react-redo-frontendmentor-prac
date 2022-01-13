@@ -207,3 +207,7 @@ input:focus::placeholder {
   max-width: 475px;
   padding: 0 1.5em;
 }
+
+.less-opacity {
+  opacity: 0.5;
+}
