@@ -1,0 +1,13 @@
+.Toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mode__light {
+  display: flex;
+  place-content: center;
+  gap: 1em;
+
+  margin-top: 0.5em;
+}

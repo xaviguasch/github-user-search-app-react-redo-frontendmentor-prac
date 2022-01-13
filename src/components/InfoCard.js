@@ -7,9 +7,10 @@ import IconCompany from '../assets/icon-company.svg'
 
 import './InfoCard.css'
 
-const InfoCard = () => {
+const InfoCard = ({ userData }) => {
+  console.log(userData)
   return (
-    <div className='InfoCard card hidden'>
+    <div className='InfoCard card'>
       <div className='card__main-grid'>
         <div className='card__avatar'>
           <img id='avatar' src='#' alt='avatar' />

@@ -1,11 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import './Search.css'
 
-const Search = () => {
+const Search = ({ onSearchSubmit }) => {
+  const [inputSearch, setInputSearch] = useState('')
+
+  const handleSearchChange = (e) => {
+    setInputSearch(e.target.value)
+  }
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault()
+
+    onSearchSubmit(inputSearch)
+
+    setInputSearch('')
+  }
+
   return (
     <div className='Search'>
-      <form action='#' className='form' id='form'>
+      <form action='#' className='form' id='form' onSubmit={handleFormSubmit}>
         <span className='svg-icon-search'>
           <svg height='24' width='25' xmlns='http://www.w3.org/2000/svg'>
             <path
@@ -14,7 +28,13 @@ const Search = () => {
             />
           </svg>
         </span>
-        <input id='search' type='text' placeholder='Search GitHub username...' />
+        <input
+          id='search'
+          type='text'
+          placeholder='Search GitHub username...'
+          value={inputSearch}
+          onChange={handleSearchChange}
+        />
         <button className='btn'>Search</button>
         <span className='error-message'>No results</span>
       </form>

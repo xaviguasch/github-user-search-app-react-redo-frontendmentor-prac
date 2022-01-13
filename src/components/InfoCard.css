@@ -1,0 +1,101 @@
+.card {
+  background: var(--clr-white);
+  margin-top: 1em;
+
+  padding: 2em 1.5em 3em;
+
+  border-radius: 0.5em;
+  box-shadow: var(--box-shadow);
+  visibility: visible; /* https://css-tricks.com/snippets/css/toggle-visibility-when-hiding-elements/ */
+  opacity: 1;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+.card__main-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: repeat(2, auto);
+  column-gap: 1.15em;
+  row-gap: 1em;
+}
+
+.card__avatar {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border: 1px solid var(--clr-blue);
+  overflow: hidden;
+  background: var(--clr-very-light-gray);
+  margin-top: 0.5em;
+
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.card__inner-grid-1 {
+  /* As children grid */
+  grid-column: 2 / -1;
+  grid-row: 1 / 2;
+}
+
+.starting-date {
+  margin-top: 0.5em;
+}
+
+.card__inner-grid-2 {
+  /* As children grid */
+  grid-column: 1/ -1;
+  grid-row: 2/ -1;
+
+  margin-top: 2em;
+
+  /* As mother grid */
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);
+  row-gap: 1.5em;
+}
+
+.bio {
+  grid-column: 1 / -1;
+  grid-row: 1 / span 1;
+}
+
+.stats {
+  background: var(--clr-very-light-gray);
+  border-radius: 0.5em;
+  padding: 1.125em 1.75em;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.measure {
+  text-align: center;
+}
+
+.measure__unit {
+  margin-top: 0.75em;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  place-content: flex-start flex-start;
+  gap: 1em;
+}
+
+.info--list {
+  display: grid;
+  gap: 1em;
+
+  list-style: none;
+}
+
+.list-el {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.8125em;
+}

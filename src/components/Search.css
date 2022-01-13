@@ -1,0 +1,34 @@
+.form {
+  background: var(--clr-white);
+  border-radius: 0.5em;
+  height: 60px;
+  padding: 0.4em 0.4em 0.4em 0.5em;
+
+  display: flex;
+  place-items: center;
+  box-shadow: var(--box-shadow);
+
+  position: relative;
+}
+
+.svg-icon-search {
+  padding-top: 0.625em;
+  margin-right: 0.5em;
+}
+
+.svg-icon-search svg {
+  transform: scale(0.85);
+}
+
+.error-message {
+  display: none;
+}
+
+.error-message.show {
+  display: block;
+
+  position: absolute;
+  top: 15px;
+  right: 100px;
+  color: var(--clr-red);
+}

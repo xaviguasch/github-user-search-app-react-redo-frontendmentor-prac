@@ -201,3 +201,9 @@ input:focus::placeholder {
 /* ================== */
 /* Utility styles */
 /* ================== */
+
+.wrapper {
+  margin: 2em auto 4.875em;
+  max-width: 475px;
+  padding: 0 1.5em;
+}
