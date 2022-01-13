@@ -81,3 +81,123 @@ img {
 /* ================== */
 /* Typography */
 /* ================== */
+
+.title {
+  color: var(--clr-very-dark-blue);
+  font-size: var(--fs-26);
+  font-weight: var(--fw-bold);
+  text-transform: lowercase;
+}
+
+.mode__type {
+  font-size: var(--fs-13);
+  font-weight: var(--fw-bold);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+.full-name {
+  font-size: var(--fs-16);
+  font-weight: var(--fw-bold);
+  color: var(--clr-very-dark-blue);
+}
+
+.github-handle {
+  font-size: var(--fs-13);
+  color: var(--clr-blue);
+}
+
+.starting-date {
+  font-size: var(--fs-13);
+  color: var(--clr-gray);
+}
+
+.bio {
+  font-size: var(--fs-13);
+}
+
+.measure__name {
+  font-size: var(--fs-11);
+}
+
+.measure__unit {
+  font-size: var(--fs-16);
+  font-weight: var(--fw-bold);
+  color: var(--clr-very-dark-blue);
+}
+
+.list-el {
+  font-size: var(--fs-13);
+}
+
+.footer__text {
+  font-size: var(--fs-10);
+  color: var(--clr-gray);
+}
+
+/* ================== */
+/* Links */
+/* ================== */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover,
+a:focus,
+a:active {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.footer__link {
+  color: var(--clr-almost-black);
+  font-weight: var(--fw-bold);
+}
+
+/* ================== */
+/* Buttons & inputs */
+/* ================== */
+.btn {
+  display: inline-block;
+  height: 100%;
+  padding: 0.75em 1em;
+  border-radius: 0.625em;
+  background: var(--clr-blue);
+  border: none;
+  font-family: inherit;
+  font-size: var(--fs-14);
+  font-weight: var(--fw-bold);
+  color: var(--clr-white);
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+  background: var(--clr-faded-blue);
+}
+
+input[type='text'] {
+  font-family: var(--ff-main);
+  font-size: var(--fs-13);
+  border: none;
+  flex-grow: 2;
+  outline: none;
+  color: var(--clr-almost-black);
+}
+
+input::placeholder {
+  font-family: var(--ff-main);
+  font-size: var(--fs-13);
+  color: var(--clr-asphalt);
+  letter-spacing: -0.5px;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+/* ================== */
+/* Utility styles */
+/* ================== */
