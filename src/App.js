@@ -9,6 +9,7 @@ import './App.css'
 function App() {
   const [userData, setUserData] = useState()
   const [error, setError] = useState('')
+  const [errorDisplay, setErrorDisplay] = useState(true)
 
   const getDataFromAPI = (user) => {
     const API = 'https://api.github.com/users/'
@@ -26,18 +27,23 @@ function App() {
     getDataFromAPI(user)
   }
 
-  const onSearchSubmit = (user) => {
+  const handleSearchSubmit = (user) => {
     getUserInfo(user)
   }
 
-  if (error) return <h1>{error}</h1>
+  // Hides error message display on click
+  const hideErrorDisplay = () => {
+    setErrorDisplay(false)
+  }
+
+  if (error && errorDisplay) return <h1 onClick={hideErrorDisplay}>{error}</h1>
 
   return (
     <div className='App'>
       <div className='wrapper'>
         <h1>devfinder</h1>
         <Toggle />
-        <Search onSearchSubmit={onSearchSubmit} />
+        <Search onSearchSubmit={handleSearchSubmit} />
         {userData && <InfoCard userData={userData} />}
       </div>
     </div>
