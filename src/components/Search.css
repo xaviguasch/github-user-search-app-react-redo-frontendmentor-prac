@@ -32,3 +32,17 @@
   right: 100px;
   color: var(--clr-red);
 }
+
+/* Dark Mode */
+
+.dark-mode input[type='text'] {
+  color: var(--clr-white);
+}
+
+.dark-mode input::placeholder {
+  color: var(--clr-white);
+}
+
+.dark-mode .form {
+  background: var(--clr-dark-blue);
+}

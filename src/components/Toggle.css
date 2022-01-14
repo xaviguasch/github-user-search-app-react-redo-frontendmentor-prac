@@ -11,3 +11,11 @@
 
   margin-top: 0.5em;
 }
+
+.title.dark-mode {
+  color: var(--clr-white);
+}
+
+.mode__type.dark-mode {
+  color: var(--clr-white);
+}

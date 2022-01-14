@@ -12,10 +12,13 @@ const Toggle = ({ darkMode, onActivateDarkMode }) => {
 
   return (
     <header className='Toggle'>
-      <h1 className='title'>Devfinder</h1>
+      <h1 className={`title ${darkMode ? 'dark-mode' : ''}`}>Devfinder</h1>
       <div className='mode'>
         <div className='mode__light'>
-          <p className='mode__type' onClick={handleToggle}>
+          <p
+            className={`mode__type ${darkMode ? 'dark-mode' : ''}`}
+            onClick={handleToggle}
+          >
             {darkMode ? 'LIGHT' : 'DARK'}
           </p>
           <span className='svg-icon-moon'>

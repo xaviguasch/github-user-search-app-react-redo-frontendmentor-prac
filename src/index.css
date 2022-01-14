@@ -64,7 +64,6 @@
 }
 
 body {
-  background-color: var(--clr-very-light-gray);
   color: var(--clr-asphalt);
   font-family: var(--ff-main);
   font-size: var(--fs-16);
@@ -179,6 +178,7 @@ a:active {
 }
 
 input[type='text'] {
+  background-color: transparent;
   font-family: var(--ff-main);
   font-size: var(--fs-13);
   border: none;
@@ -203,9 +203,8 @@ input:focus::placeholder {
 /* ================== */
 
 .wrapper {
-  margin: 2em auto 4.875em;
   max-width: 475px;
-  padding: 0 1.5em;
+  padding: 2em 1.5em 4.875em;
 }
 
 .less-opacity {

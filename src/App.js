@@ -46,12 +46,11 @@ function App() {
   if (error && errorDisplay) return <h1 onClick={hideErrorDisplay}>{error}</h1>
 
   return (
-    <div className='App'>
+    <div className={`App ${darkMode ? 'dark-mode' : ''}`}>
       <div className='wrapper'>
-        <h1>devfinder</h1>
         <Toggle darkMode={darkMode} onActivateDarkMode={activateDarkMode} />
-        <Search onSearchSubmit={handleSearchSubmit} />
-        {userData && <InfoCard userData={userData} />}
+        <Search onSearchSubmit={handleSearchSubmit} darkMode={darkMode} />
+        {userData && <InfoCard userData={userData} darkMode={darkMode} />}
       </div>
     </div>
   )

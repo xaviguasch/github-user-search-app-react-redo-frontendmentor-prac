@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import './Search.css'
 
-const Search = ({ onSearchSubmit }) => {
+const Search = ({ onSearchSubmit, darkMode }) => {
   const [inputSearch, setInputSearch] = useState('')
 
   const handleSearchChange = (e) => {
@@ -18,7 +18,7 @@ const Search = ({ onSearchSubmit }) => {
   }
 
   return (
-    <div className='Search'>
+    <div className={`Search ${darkMode ? 'dark-mode' : ''}`}>
       <form action='#' className='form' id='form' onSubmit={handleFormSubmit}>
         <span className='svg-icon-search'>
           <svg height='24' width='25' xmlns='http://www.w3.org/2000/svg'>

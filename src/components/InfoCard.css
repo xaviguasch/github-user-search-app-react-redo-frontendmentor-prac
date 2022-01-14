@@ -99,3 +99,30 @@
   align-items: center;
   gap: 0.8125em;
 }
+
+/* Dark Mode */
+
+.dark-mode .card {
+  background: var(--clr-dark-blue);
+}
+
+.dark-mode .stats {
+  background-color: var(--clr-almost-black);
+}
+
+.dark-mode .full-name,
+.dark-mode .date,
+.dark-mode .bio,
+.dark-mode .measure__name,
+.dark-mode .measure__unit,
+.dark-mode .list-el {
+  color: var(--clr-white);
+}
+
+/* Fill property doesn't seem to accept variables */
+.dark-mode .icon-twitter path,
+.dark-mode .icon-location path,
+.dark-mode .icon-website path,
+.dark-mode .icon-company path {
+  fill: var(--clr-white);
+}

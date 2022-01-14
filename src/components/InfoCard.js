@@ -1,13 +1,13 @@
 import React from 'react'
 
-import IconLocation from '../assets/icon-location.svg'
-import IconWebsite from '../assets/icon-website.svg'
-import IconTwitter from '../assets/icon-twitter.svg'
-import IconCompany from '../assets/icon-company.svg'
+import { ReactComponent as IconLocation } from '../assets/icon-location.svg'
+import { ReactComponent as IconWebsite } from '../assets/icon-website.svg'
+import { ReactComponent as IconTwitter } from '../assets/icon-twitter.svg'
+import { ReactComponent as IconCompany } from '../assets/icon-company.svg'
 
 import './InfoCard.css'
 
-const InfoCard = ({ userData }) => {
+const InfoCard = ({ userData, darkMode }) => {
   console.log(userData)
 
   const {
@@ -36,14 +36,14 @@ const InfoCard = ({ userData }) => {
   }
 
   return (
-    <div className='InfoCard card'>
+    <div className={`InfoCard card ${darkMode ? 'dark-mode' : ''}`}>
       <div className='card__main-grid'>
         <div className='card__avatar'>
           <img id='avatar' src={avatar_url} alt='avatar' />
         </div>
         <div className='card__inner-grid-1'>
-          <h2 className='full-name'>{login}</h2>
-          <p className='github-handle'>{name || 'not available'}</p>
+          <h2 className='full-name'>{name}</h2>
+          <p className='github-handle'>{login ? `@${login}` : 'not available'}</p>
           <p className='starting-date'>
             <span className='date'>{fromISOStringToLongDate(created_at)}</span>
           </p>
@@ -77,13 +77,13 @@ const InfoCard = ({ userData }) => {
                 className={`list-el list-el--location ${location ? '' : 'less-opacity'}`}
               >
                 <div className='icon'>
-                  <img src={IconLocation} alt='icon location' />
+                  <IconLocation className='icon-location' />
                 </div>
                 <p id='location'>{location || 'Not available'}</p>
               </li>
               <li className={`list-el list-el--blog ${blog ? '' : 'less-opacity'}`}>
                 <div className='icon'>
-                  <img src={IconWebsite} alt='icon website' />
+                  <IconWebsite className='icon-website' />
                 </div>
                 <a id='blog' href='#' target='_blank' className='list-el__link'>
                   {blog || 'Not available'}
@@ -95,7 +95,7 @@ const InfoCard = ({ userData }) => {
                 }`}
               >
                 <div className='icon'>
-                  <img src={IconTwitter} alt='icon twitter' />
+                  <IconTwitter className='icon-twitter' />
                 </div>
                 <a id='twitter' href='#' target='_blank' className='list-el__link'>
                   {twitter_username || 'Not available'}
@@ -103,7 +103,7 @@ const InfoCard = ({ userData }) => {
               </li>
               <li className={`list-el list-el--company ${company ? '' : 'less-opacity'}`}>
                 <div className='icon'>
-                  <img src={IconCompany} alt='icon company' />
+                  <IconCompany className='icon-company' />
                 </div>
                 <p id='company'>{company || 'Not available'}</p>
               </li>
