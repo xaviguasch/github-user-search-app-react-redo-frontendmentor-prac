@@ -10,6 +10,7 @@ function App() {
   const [userData, setUserData] = useState()
   const [error, setError] = useState('')
   const [errorDisplay, setErrorDisplay] = useState(true)
+  const [darkMode, setDarkMode] = useState(false)
 
   const getDataFromAPI = (user) => {
     const API = 'https://api.github.com/users/'
@@ -20,7 +21,9 @@ function App() {
         throw new Error('something went wrong while requesting posts')
       })
       .then((data) => setUserData(data))
-      .catch((error) => setError(error.message))
+      .catch((error) => {
+        setError(error.message)
+      })
   }
 
   const getUserInfo = (user) => {
@@ -36,13 +39,17 @@ function App() {
     setErrorDisplay(false)
   }
 
+  const activateDarkMode = () => {
+    setDarkMode((prevState) => !prevState)
+  }
+
   if (error && errorDisplay) return <h1 onClick={hideErrorDisplay}>{error}</h1>
 
   return (
     <div className='App'>
       <div className='wrapper'>
         <h1>devfinder</h1>
-        <Toggle />
+        <Toggle darkMode={darkMode} onActivateDarkMode={activateDarkMode} />
         <Search onSearchSubmit={handleSearchSubmit} />
         {userData && <InfoCard userData={userData} />}
       </div>
