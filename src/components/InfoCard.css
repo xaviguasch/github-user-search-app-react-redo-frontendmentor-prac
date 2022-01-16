@@ -129,31 +129,78 @@
 
 /* Tablet */
 @media (min-width: 768px) {
+  /* Card */
   .card {
+    margin-top: 1.5em;
+
     padding: 2.5em;
+  }
+
+  .card__main-grid {
+    column-gap: 2.5em;
+    row-gap: 1.5em;
+  }
+
+  .card__avatar {
+    width: 117px;
+    height: 117px;
+    margin-top: 0;
+  }
+
+  .starting-date {
+    margin-top: 0;
+  }
+
+  .card__inner-grid-2 {
+    margin-top: 0;
+
+    /* As mother grid */
+    row-gap: 1.875em;
+  }
+
+  .stats {
+    padding: 1em 2em 0.75em;
+
+    justify-content: center;
+  }
+
+  .measure {
+    text-align: left;
+    width: 100%;
+  }
+
+  .info {
+    flex-direction: column;
+    gap: 1.25em;
   }
 
   .info--list {
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    row-gap: 1.1875em;
+  }
 
-    grid-template-areas:
-      'location twitter'
-      'blog company';
+  .list-el {
+    font-size: var(--fs-15);
+    width: 100%;
+
+    gap: 1em;
   }
 
   .list-el--location {
-    grid-area: location;
+    grid-row: 1 / 2;
+    grid-column: 1 /2;
   }
-
   .list-el--blog {
-    grid-area: blog;
+    grid-row: 2 / 3;
+    grid-column: 1 /2;
   }
-
   .list-el--twitter {
-    grid-area: twitter;
+    grid-row: 1 / 2;
+    grid-column: 2 /3;
   }
-
   .list-el--company {
-    grid-area: company;
+    grid-row: 2 / 3;
+    grid-column: 2 /3;
   }
 }

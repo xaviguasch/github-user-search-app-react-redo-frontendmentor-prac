@@ -21,10 +21,6 @@
 }
 
 .error-message {
-  display: none;
-}
-
-.error-message.show {
   display: block;
 
   position: absolute;
@@ -45,4 +41,26 @@
 
 .dark-mode .form {
   background: var(--clr-dark-blue);
+}
+
+/* ================== */
+/* MEDIA QUERIES */
+/* ================== */
+
+/* Tablet */
+@media (min-width: 768px) {
+  /* Form */
+  .form {
+    padding: 0.6em 0.4em 0.6em 2em;
+    height: 70px;
+  }
+
+  .svg-icon-search {
+    margin-right: 1.5em;
+  }
+
+  .error-message.show {
+    top: 20px;
+    right: 140px;
+  }
 }

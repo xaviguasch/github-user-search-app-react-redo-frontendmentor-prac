@@ -8,8 +8,7 @@ import './App.css'
 
 function App() {
   const [userData, setUserData] = useState()
-  const [error, setError] = useState('')
-  const [errorDisplay, setErrorDisplay] = useState(true)
+  const [errorDisplay, setErrorDisplay] = useState(false)
   const [darkMode, setDarkMode] = useState(false)
 
   const getDataFromAPI = (user) => {
@@ -22,7 +21,6 @@ function App() {
       })
       .then((data) => setUserData(data))
       .catch((error) => {
-        setError(error.message)
         setErrorDisplay(true)
       })
   }
@@ -44,14 +42,20 @@ function App() {
     setDarkMode((prevState) => !prevState)
   }
 
-  if (error && errorDisplay) return <h1 onClick={hideErrorDisplay}>{error}</h1>
-
   return (
     <div className={`App ${darkMode ? 'dark-mode' : ''}`}>
       <div className='wrapper'>
         <Toggle darkMode={darkMode} onActivateDarkMode={activateDarkMode} />
-        <Search onSearchSubmit={handleSearchSubmit} darkMode={darkMode} />
-        {userData && <InfoCard userData={userData} darkMode={darkMode} />}
+        <Search
+          onSearchSubmit={handleSearchSubmit}
+          darkMode={darkMode}
+          errorDisplay={errorDisplay}
+          onHideErrorDisplay={hideErrorDisplay}
+        />
+
+        {!errorDisplay && userData && (
+          <InfoCard userData={userData} darkMode={darkMode} />
+        )}
       </div>
     </div>
   )

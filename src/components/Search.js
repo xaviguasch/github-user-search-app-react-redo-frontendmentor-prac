@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import './Search.css'
 
-const Search = ({ onSearchSubmit, darkMode }) => {
+const Search = ({ onSearchSubmit, darkMode, errorDisplay, onHideErrorDisplay }) => {
   const [inputSearch, setInputSearch] = useState('')
 
   const handleSearchChange = (e) => {
@@ -15,6 +15,7 @@ const Search = ({ onSearchSubmit, darkMode }) => {
     onSearchSubmit(inputSearch)
 
     setInputSearch('')
+    onHideErrorDisplay()
   }
 
   return (
@@ -31,12 +32,12 @@ const Search = ({ onSearchSubmit, darkMode }) => {
         <input
           id='search'
           type='text'
-          placeholder='Search GitHub username...'
+          placeholder={`${errorDisplay ? '' : 'Search GitHub username...'}`}
           value={inputSearch}
           onChange={handleSearchChange}
         />
         <button className='btn'>Search</button>
-        <span className='error-message'>No results</span>
+        <span className='error-message'>{errorDisplay ? 'No results' : ''}</span>
       </form>
     </div>
   )
