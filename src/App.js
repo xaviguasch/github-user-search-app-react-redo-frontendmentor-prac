@@ -23,6 +23,7 @@ function App() {
       .then((data) => setUserData(data))
       .catch((error) => {
         setError(error.message)
+        setErrorDisplay(true)
       })
   }
 
