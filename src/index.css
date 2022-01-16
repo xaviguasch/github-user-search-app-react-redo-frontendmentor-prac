@@ -216,12 +216,6 @@ input:focus::placeholder {
 /* MEDIA QUERIES */
 /* ================== */
 
-@media (min-width: 400px) {
-  .wrapper {
-    padding: 2em 1.5em 10em;
-  }
-}
-
 /* Tablet */
 @media (min-width: 768px) {
   /* Typography */
@@ -279,7 +273,7 @@ input:focus::placeholder {
   /* Utility styles */
   .wrapper {
     max-width: 573px;
-    padding: 8.75em 0 14.75em;
+    padding: 8.75em 0 0em;
     margin: 0 auto;
   }
 }
