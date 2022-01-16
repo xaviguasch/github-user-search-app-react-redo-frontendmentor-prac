@@ -205,8 +205,63 @@ input:focus::placeholder {
 .wrapper {
   max-width: 475px;
   padding: 2em 1.5em 4.875em;
+  margin: 0 auto;
 }
 
 .less-opacity {
   opacity: 0.5;
+}
+
+/* ================== */
+/* MEDIA QUERIES */
+/* ================== */
+
+@media (min-width: 400px) {
+  .wrapper {
+    padding: 2em 1.5em 10em;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  /* Typography */
+  .full-name {
+    font-size: var(--fs-26);
+  }
+
+  .github-handle {
+    font-size: var(--fs-16);
+  }
+
+  .starting-date {
+    font-size: var(--fs-15);
+  }
+
+  .bio {
+    font-size: var(--fs-15);
+  }
+
+  .measure__name {
+    font-size: var(--fs-13);
+  }
+
+  .measure__unit {
+    font-size: var(--fs-22);
+  }
+
+  .list-el {
+    font-size: var(--fs-15);
+  }
+
+  .footer__text {
+    font-size: var(--fs-10);
+    color: var(--clr-gray);
+  }
+
+  /* Utility styles */
+  .wrapper {
+    max-width: 573px;
+    padding: 8.75em 0 14.75em;
+    margin: 0 auto;
+  }
 }

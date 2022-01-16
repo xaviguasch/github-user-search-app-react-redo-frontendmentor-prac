@@ -81,6 +81,7 @@ const InfoCard = ({ userData, darkMode }) => {
                 </div>
                 <p id='location'>{location || 'Not available'}</p>
               </li>
+
               <li className={`list-el list-el--blog ${blog ? '' : 'less-opacity'}`}>
                 <div className='icon'>
                   <IconWebsite className='icon-website' />
@@ -89,6 +90,7 @@ const InfoCard = ({ userData, darkMode }) => {
                   {blog || 'Not available'}
                 </a>
               </li>
+
               <li
                 className={`list-el list-el--twitter ${
                   twitter_username ? '' : 'less-opacity'
@@ -101,6 +103,7 @@ const InfoCard = ({ userData, darkMode }) => {
                   {twitter_username || 'Not available'}
                 </a>
               </li>
+
               <li className={`list-el list-el--company ${company ? '' : 'less-opacity'}`}>
                 <div className='icon'>
                   <IconCompany className='icon-company' />

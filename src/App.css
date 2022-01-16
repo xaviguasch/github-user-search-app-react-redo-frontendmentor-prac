@@ -1,9 +1,12 @@
 .App {
   background-color: var(--clr-very-light-gray);
-
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .App.dark-mode {
   background-color: var(--clr-almost-black);
 }
+
+/* ================== */
+/* MEDIA QUERIES */
+/* ================== */

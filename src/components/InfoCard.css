@@ -126,3 +126,34 @@
 .dark-mode .icon-company path {
   fill: var(--clr-white);
 }
+
+/* Tablet */
+@media (min-width: 768px) {
+  .card {
+    padding: 2.5em;
+  }
+
+  .info--list {
+    grid-template-columns: 1fr 1fr;
+
+    grid-template-areas:
+      'location twitter'
+      'blog company';
+  }
+
+  .list-el--location {
+    grid-area: location;
+  }
+
+  .list-el--blog {
+    grid-area: blog;
+  }
+
+  .list-el--twitter {
+    grid-area: twitter;
+  }
+
+  .list-el--company {
+    grid-area: company;
+  }
+}
