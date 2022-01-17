@@ -247,6 +247,8 @@
   .full-name {
     grid-column: 1 /2;
     grid-row: 1 /2;
+
+    line-height: 1.25;
   }
 
   .github-handle {
@@ -256,6 +258,7 @@
   .starting-date {
     grid-column: 2 /3;
     grid-row: 1 /2;
+    justify-self: end;
   }
 
   .card__inner-grid-2 {
