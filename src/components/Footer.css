@@ -8,3 +8,7 @@
 .footer__text {
   text-align: center;
 }
+
+.dark-mode .footer__text {
+  color: var(--clr-white);
+}

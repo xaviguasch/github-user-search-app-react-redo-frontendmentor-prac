@@ -2,9 +2,9 @@ import React from 'react'
 
 import './Footer.css'
 
-const Footer = () => {
+const Footer = ({ darkMode }) => {
   return (
-    <footer class='Footer'>
+    <footer class={`Footer ${darkMode ? 'dark-mode' : ''}`}>
       <div class='footer__signature'>
         <div class='attribution'>
           <p class='footer__text'>

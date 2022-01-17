@@ -155,6 +155,10 @@ a:active {
   font-weight: var(--fw-bold);
 }
 
+.dark-mode .footer__link {
+  color: var(--clr-white);
+}
+
 /* ================== */
 /* Buttons & inputs */
 /* ================== */

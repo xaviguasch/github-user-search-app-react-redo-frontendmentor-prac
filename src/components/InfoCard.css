@@ -7,8 +7,9 @@
   border-radius: 0.5em;
   box-shadow: var(--box-shadow);
   visibility: visible; /* https://css-tricks.com/snippets/css/toggle-visibility-when-hiding-elements/ */
-  opacity: 1;
-  transition: visibility 0s, opacity 0.5s linear;
+  /* Transitions don't work with this method in React */
+  /* opacity: 1;
+  transition: visibility 0s, opacity 0.5s linear; */
 }
 
 .card__main-grid {

@@ -57,7 +57,7 @@ function App() {
         {!errorDisplay && userData && (
           <InfoCard userData={userData} darkMode={darkMode} />
         )}
-        {!errorDisplay && userData && <Footer />}
+        {!errorDisplay && userData && <Footer darkMode={darkMode} />}
       </div>
     </div>
   )
