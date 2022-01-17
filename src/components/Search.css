@@ -59,7 +59,7 @@
     margin-right: 1.5em;
   }
 
-  .error-message.show {
+  .error-message {
     top: 20px;
     right: 140px;
   }

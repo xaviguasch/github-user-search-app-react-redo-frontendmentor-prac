@@ -204,3 +204,70 @@
     grid-column: 2 /3;
   }
 }
+
+/* LAPTOP */
+@media (min-width: 1030px) {
+  /* Utility styles */
+  .wrapper {
+    max-width: 730px;
+  }
+
+  /* SECTIONS */
+
+  /* Card */
+  .card {
+    padding: 3em;
+  }
+
+  .card__main-grid {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: repeat(10, auto);
+    column-gap: 2em;
+    row-gap: 0em;
+  }
+
+  .card__avatar {
+    grid-row: 1 / 4;
+  }
+
+  .card__inner-grid-1 {
+    /* As children grid */
+    grid-column: 2 / -1;
+    grid-row: 1 / 2;
+
+    /* As mother grid */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .full-name {
+    grid-column: 1 /2;
+    grid-row: 1 /2;
+  }
+
+  .github-handle {
+    grid-column: 1 /2;
+    grid-row: 2 /3;
+  }
+  .starting-date {
+    grid-column: 2 /3;
+    grid-row: 1 /2;
+  }
+
+  .card__inner-grid-2 {
+    /* As children grid */
+    grid-column: 2/ -1;
+    grid-row: 3/ -1;
+
+    margin-top: 0;
+
+    /* As mother grid */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    row-gap: 2.15em;
+  }
+}
