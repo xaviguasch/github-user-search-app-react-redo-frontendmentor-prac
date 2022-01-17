@@ -277,3 +277,10 @@ input:focus::placeholder {
     margin: 0 auto;
   }
 }
+
+/* Avoids scrolling on 13" laptop screens */
+@media (max-height: 745px) {
+  .wrapper {
+    padding: 1em 0 0.5em;
+  }
+}

@@ -16,7 +16,7 @@ const Footer = () => {
             >
               Frontend Mentor
             </a>
-            . Coded by
+            . Coded by{' '}
             <a class='footer__link' href='https://github.com/xaviguasch/'>
               Xavi Guasch
             </a>
