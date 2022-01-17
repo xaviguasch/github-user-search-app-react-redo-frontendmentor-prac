@@ -1,0 +1,10 @@
+.Footer {
+  margin-top: 0.5em;
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+.footer__text {
+  text-align: center;
+}

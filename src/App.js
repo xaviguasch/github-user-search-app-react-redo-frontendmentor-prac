@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 import InfoCard from './components/InfoCard'
 import Search from './components/Search'
 import Toggle from './components/Toggle'
+import Footer from './components/Footer'
 
 import './App.css'
 
@@ -56,6 +57,7 @@ function App() {
         {!errorDisplay && userData && (
           <InfoCard userData={userData} darkMode={darkMode} />
         )}
+        {!errorDisplay && userData && <Footer />}
       </div>
     </div>
   )
